@@ -8,11 +8,11 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-@WebServlet("/main")
+//@WebServlet("/main")
 public class MainServlet extends HttpServlet {
     @Override
-    protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.setHeader("Content-Type","text/html; charset=utf-8");
+    protected void service(HttpServletRequest req, HttpServletResponse response) throws ServletException, IOException {
+        response.setHeader("Content-Type","text/html; charset=utf-8");
         String html = "<!DOCTYPE html>\n" +
                 "<html lang=\"en\">\n" +
                 "\n" +
@@ -28,6 +28,6 @@ public class MainServlet extends HttpServlet {
                 "</body>\n" +
                 "\n" +
                 "</html>";
-        resp.getWriter().println(html);
+        response.getWriter().println(html);
     }
 }
